@@ -214,3 +214,5 @@ app.on('ready', () => {
 });
 
 app.on('window-all-closed', () => {}); // nop
+
+app.dock.hide();
