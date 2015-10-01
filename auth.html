@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+body {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+input, button {
+  padding: 5px;
+}
+    </style>
+  </head>
+  <body>
+    <form>
+      <p>
+      <label>
+        Enter authentication code:<br>
+        <input type="text" id="code">
+      </label>
+      </p>
+      <p>
+      <button onclick="auth()">Authenticate</button>
+      </p>
+    </form>
+    <script>
+var ipc = require('ipc');
+
+function auth() {
+  var code = document.querySelector('#code').value;
+  ipc.send('auth-token-entered', code);
+  ipc.on('auth-token-error', function (err) {
+    alert(err.toString());
+  });
+}
+    </script>
+  </body>
+</html>
