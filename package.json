@@ -7,7 +7,7 @@
     "watch": "tsc --watch --module commonjs --outDir . src/*.ts",
     "compile": "tsc --module commonjs --outDir . src/*.ts",
     "app": "electron .",
-    "postinstall": "dtsm install"
+    "postinstall": "dtsm --insight false install"
   },
   "author": "motemen <https://github.com/motemen>",
   "license": "MIT",
