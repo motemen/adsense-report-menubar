@@ -17,7 +17,8 @@
     "electron-packager": "^5.1.0",
     "electron-prebuilt": "^0.33.1",
     "lodash.assign": "^3.2.0",
-    "tsify": "^0.12.2"
+    "tsify": "^0.12.2",
+    "typescript": "^1.6.2"
   },
   "dependencies": {
     "googleapis": "^2.1.5"
