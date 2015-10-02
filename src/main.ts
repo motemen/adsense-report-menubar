@@ -76,7 +76,7 @@ ipc.on('auth-token-entered', (ev, code) => {
 function authorize(force: boolean = false) {
   if (force || !auth.isAuthenticated()) {
     authWindow = new BrowserWindow({ 'use-content-size': true });
-    authWindow.loadUrl('file://' + __dirname + '/auth.html');
+    authWindow.loadUrl('file://' + __dirname + '/../view/auth.html');
     authWindow.on('closed', () => { authWindow = null });
 
     let authUrl = auth.getAuthUrl();
@@ -209,7 +209,7 @@ app.on('ready', () => {
 
   updateNow();
 
-  tray = new Tray(__dirname + '/icon.png');
+  tray = new Tray(path.resolve(__dirname, '..', 'res/icon.png'));
   updateMenuItems([ 'Loading...' ]);
 });
 

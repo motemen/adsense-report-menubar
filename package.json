@@ -2,10 +2,9 @@
   "name": "adsense-report-menubar",
   "version": "1.0.0",
   "description": "AdSense performance report in your menubar",
-  "main": "main.js",
+  "main": "app/main.js",
   "scripts": {
-    "watch": "tsc --watch --module commonjs --outDir . src/*.ts",
-    "compile": "tsc --module commonjs --outDir . src/*.ts",
+    "watch": "tsc --watch --module commonjs --outDir app/ src/*.ts",
     "app": "electron .",
     "postinstall": "dtsm --insight false install"
   },
