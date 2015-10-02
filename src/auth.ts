@@ -2,7 +2,6 @@
 
 import * as googleapis from 'googleapis';
 
-let adsense = googleapis.adsense('v1.4');
 let OAuth2  = googleapis.auth.OAuth2;
 
 export let client = new OAuth2(
