@@ -1,7 +1,7 @@
 {
   "name": "adsense-report-menubar",
   "version": "1.0.0",
-  "description": "",
+  "description": "AdSense performance report in your menubar",
   "main": "main.js",
   "scripts": {
     "watch": "tsc --watch --module commonjs --outDir . src/*.ts",
@@ -9,18 +9,16 @@
     "app": "electron .",
     "postinstall": "dtsm install"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "motemen <https://github.com/motemen>",
+  "license": "MIT",
   "devDependencies": {
-    "browserify": "^11.2.0",
     "dtsm": "^0.11.0",
     "electron-packager": "^5.1.0",
     "electron-prebuilt": "^0.33.1",
-    "lodash.assign": "^3.2.0",
-    "tsify": "^0.12.2",
     "typescript": "^1.6.2"
   },
   "dependencies": {
-    "googleapis": "^2.1.5"
+    "googleapis": "^2.1.5",
+    "lodash.assign": "^3.2.0"
   }
 }
