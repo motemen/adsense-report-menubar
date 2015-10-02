@@ -5,8 +5,10 @@
   "main": "app/main.js",
   "scripts": {
     "watch": "tsc --watch --module commonjs --outDir app/ src/*.ts",
+    "compile": "tsc --module commonjs --outDir app/ src/*.ts",
     "app": "electron .",
-    "postinstall": "dtsm --insight false install"
+    "setup-dev": "dtsm --insight false install",
+    "dist": "npm run compile && mkdir -p dist && cp -R package.json app res view dist/ && ( cd dist/ && npm install --production ) && electron-packager dist/ 'AdSense Report Menubar' --overwrite --platform darwin --arch=x64 --version=0.33.1 --icon appicon.icns"
   },
   "author": "motemen <https://github.com/motemen>",
   "license": "MIT",
