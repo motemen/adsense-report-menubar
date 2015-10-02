@@ -6,15 +6,16 @@
   "scripts": {
     "watch": "tsc --watch --module commonjs --outDir . src/*.ts",
     "compile": "tsc --module commonjs --outDir . src/*.ts",
-    "app": "electron ."
+    "app": "electron .",
+    "postinstall": "dtsm install"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^11.2.0",
     "dtsm": "^0.11.0",
+    "electron-packager": "^5.1.0",
     "electron-prebuilt": "^0.33.1",
-    "lodash": "^3.10.1",
     "lodash.assign": "^3.2.0",
     "tsify": "^0.12.2"
   },
