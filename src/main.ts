@@ -75,12 +75,12 @@ ipc.on('auth-token-entered', (ev, code) => {
 
 function authorize(force: boolean = false) {
   if (force || !auth.isAuthenticated()) {
+    let authUrl = auth.getAuthUrl();
+    shell.openExternal(authUrl);
+
     authWindow = new BrowserWindow({ 'use-content-size': true });
     authWindow.loadUrl('file://' + __dirname + '/../view/auth.html');
     authWindow.on('closed', () => { authWindow = null });
-
-    let authUrl = auth.getAuthUrl();
-    shell.openExternal(authUrl);
   }
 }
 
