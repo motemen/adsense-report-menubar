@@ -35,9 +35,9 @@ let config = {
 // e.g. as "dimension" must be overridden by Dimension configuration
 const OPTIONS = {
   Span:      {
-    'Today':               { startDate: 'today' },
-    'This Week':           { startDate: 'today-6d' },
-    'This Month (weekly)': { startDate: 'today-1m', dimension: 'WEEK' }
+    'Today':        { startDate: 'today' },
+    'Last 7 days':  { startDate: 'today-6d' },
+    'Last 1 month': { startDate: 'today-1m' },
   },
   Dimension: {
     'Date':    { dimension: 'DATE' },
@@ -138,6 +138,15 @@ function updateMenuItems(detailItems: string[], account?: adsense.Account) {
     label: account ? account.name + ' (' + account.id + ')' : 'Authorize...',
     click: function () {
       authorize(true);
+    }
+  });
+
+  items.push({ type: 'separator' });
+
+  items.push({
+    label: 'Quit',
+    click: function () {
+      app.quit();
     }
   });
 
